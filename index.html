@@ -159,10 +159,10 @@ function initUI(){
 		color:#FFFFFF;
 	}
 	#startStopBtn:before{
-		content:"Start";
+		content:"开始测速";
 	}
 	#startStopBtn.running:before{
-		content:"Abort";
+		content:"停止测速";
 	}
 	#test{
 		margin-top:2em;
@@ -273,13 +273,13 @@ function initUI(){
 		}
 	}
 </style>
-<title>LibreSpeed Example</title>
+<title>暮远阁测速站</title>
 </head>
 <body>
-<h1>LibreSpeed Example</h1>
+<h1>暮远阁测速站</h1>
 <div id="testWrapper">
 	<div id="startStopBtn" onclick="startStop()"></div><br/>
-	<a class="privacy" href="#" onclick="I('privacyPolicy').style.display=''">Privacy</a>
+	<a class="privacy" href="#" onclick="I('privacyPolicy').style.display=''">隐私说明</a>
 	<div id="test">
 		<div class="testGroup">
 			<div class="testArea2">
@@ -288,20 +288,20 @@ function initUI(){
 				<div class="unit">ms</div>
 			</div>
 			<div class="testArea2">
-				<div class="testName">Jitter</div>
+				<div class="testName">抖动</div>
 				<div id="jitText" class="meterText" style="color:#AA6060"></div>
 				<div class="unit">ms</div>
 			</div>
 		</div>
 		<div class="testGroup">
 			<div class="testArea">
-				<div class="testName">Download</div>
+				<div class="testName">下行</div>
 				<canvas id="dlMeter" class="meter"></canvas>
 				<div id="dlText" class="meterText"></div>
 				<div class="unit">Mbit/s</div>
 			</div>
 			<div class="testArea">
-				<div class="testName">Upload</div>
+				<div class="testName">上行</div>
 				<canvas id="ulMeter" class="meter"></canvas>
 				<div id="ulText" class="meterText"></div>
 				<div class="unit">Mbit/s</div>
@@ -311,13 +311,13 @@ function initUI(){
 			<span id="ip"></span>
 		</div>
 		<div id="shareArea" style="display:none">
-			<h3>Share results</h3>
-			<p>Test ID: <span id="testId"></span></p>
+			<h3>结果分享</h3>
+			<p>测试ID: <span id="testId"></span></p>
 			<input type="text" value="" id="resultsURL" readonly="readonly" onclick="this.select();this.focus();this.select();document.execCommand('copy');alert('Link copied')"/>
 			<img src="" id="resultsImg" />
 		</div>
 	</div>
-	<a href="https://github.com/librespeed/speedtest">Source code</a>
+	<a href="https://github.com/yaozjz/speedtest">源码地址</a>
 </div>
 <div id="privacyPolicy" style="display:none">
     <h2>Privacy Policy</h2>
@@ -356,7 +356,7 @@ function initUI(){
     </p>
     <br/><br/>
     <div class="closePrivacyPolicy">
-        <a class="privacy" href="#" onclick="I('privacyPolicy').style.display='none'">Close</a>
+        <a class="privacy" href="#" onclick="I('privacyPolicy').style.display='none'">关闭</a>
     </div>
     <br/>
 </div>
